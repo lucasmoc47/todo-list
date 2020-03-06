@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { TodosContext } from '../../contexts/TodosContext'
 
+import Todo from '../Todo'
+
 // import { Container } from './styles';
 
 export default function TodoList() {
@@ -9,7 +11,7 @@ export default function TodoList() {
 	return (
 		<ul>
 			{todos.map(todo => (
-				<li key={todo.id}>{todo.task}</li>
+				<Todo key={todo.id} {...todo} />
 			))}
 		</ul>
 	);
