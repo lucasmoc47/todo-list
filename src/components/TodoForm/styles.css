@@ -1,0 +1,15 @@
+.todo-form {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.todo-form input {
+	width: 100%;
+	height: 2rem;
+	background: none;
+	border-bottom: 1px solid #34495e;
+	color: #34495e;
+	font-size: 1.2rem;
+	font-weight: 300;
+	outline: none;
+}
