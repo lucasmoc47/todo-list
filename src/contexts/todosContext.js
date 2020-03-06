@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react'
 
-import todosReducer from '../reducers/todosReducer'
+import TodosReducer from '../reducers/TodosReducer'
 
 const defaultTodos = [
 	{ id: '0', task: 'Read a book', completed: false },
@@ -8,10 +8,10 @@ const defaultTodos = [
 	{ id: '2', task: 'Write articles', completed: false }
 ]
 
-export default TodosContext = createContext()
+export const TodosContext = createContext()
 
 export function TodosProvider(props) {
-	const [todos] = useReducer(todosReducer, defaultTodos)
+	const [todos] = useReducer(TodosReducer, defaultTodos)
 
 	return (
 		<TodosContext.Provider value={todos}>
