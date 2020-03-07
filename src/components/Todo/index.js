@@ -33,20 +33,20 @@ function Todo({ id, task, completed }) {
 				color: completed ? '#bdc3c7' : '#34495e'
 			}}>{task}</span>
 			<div className="icons">
+				<i 
+					style={{ color: '#58b2dc', marginRight: '.5rem'}}
+					className="fas fa-pen"
+					onClick={e => {
+						e.stopPropagation()
+						toggle()
+					}}
+				/>
 				<i
 					style={{ color: '#c0392b' }}
 					className="fas fa-trash"
 					onClick={e => {
 						e.stopPropagation()
 						dispatch({ type: REMOVE_TODO, id })
-					}}
-				/>
-				<i 
-					style={{ color: '#58b2dc'}}
-					className="fas fa-pen"
-					onClick={e => {
-						e.stopPropagation()
-						toggle()
 					}}
 				/>
 			</div>

@@ -9,7 +9,7 @@ export default function TodoList() {
 	const todos = useContext(TodosContext)
 
 	return (
-		<ul>
+		<ul style={{ paddingLeft: 10, width: '95%' }}>
 			{todos.map(todo => (
 				<Todo key={todo.id} {...todo} />
 			))}

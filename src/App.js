@@ -5,7 +5,7 @@ import TodoApp from './components/TodoApp'
 
 function App() {
 	return (
-		<div>
+		<div className="App">
 			<header className="header">
 				<h1>
 					todo<span>list</span>

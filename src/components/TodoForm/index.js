@@ -24,6 +24,7 @@ export default function TodoForm() {
 				placeholder="Add your task here..."
 				value={value}
 				onChange={handleChange}
+				className="todo-input"
 			/>
 		</form>
 	);
