@@ -5,6 +5,8 @@ import useToggleState from '../../hooks/useToggleState'
 import { DispatchContext } from '../../contexts/TodosContext'
 import { REMOVE_TODO, TOGGLE_TODO } from '../../constants/actions'
 
+import EditTodoForm from '../EditTodoForm'
+
 import './styles.css'
 
 function Todo({ id, task, completed }) {
@@ -19,7 +21,7 @@ function Todo({ id, task, completed }) {
 				style={{ overflowY: 'hidden' }}
 				onClick={() => toggle()}
 			>
-				edit todo form
+				<EditTodoForm id={id} task={task} toggleEditForm={toggle} />
 			</li>
 		)
 	}
@@ -37,6 +39,14 @@ function Todo({ id, task, completed }) {
 					onClick={e => {
 						e.stopPropagation()
 						dispatch({ type: REMOVE_TODO, id })
+					}}
+				/>
+				<i 
+					style={{ color: '#58b2dc'}}
+					className="fas fa-pen"
+					onClick={e => {
+						e.stopPropagation()
+						toggle()
 					}}
 				/>
 			</div>
